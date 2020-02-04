@@ -23,4 +23,7 @@ spring:
       validation-query-timeout:
       validation-query: SELECT 1
   devtools:
+    remote:
+      restart:
+        enabled: false
     add-properties: true                                  #开发者工具 热部署
