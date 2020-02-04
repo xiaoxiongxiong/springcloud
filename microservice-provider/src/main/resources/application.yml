@@ -23,6 +23,8 @@ spring:
       validation-query-timeout:
       validation-query: SELECT 1
   devtools:
+    livereload:
+      port: 35729
     remote:
       restart:
         enabled: false

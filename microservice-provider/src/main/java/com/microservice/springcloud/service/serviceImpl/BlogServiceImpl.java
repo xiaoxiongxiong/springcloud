@@ -20,19 +20,24 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public Integer insertBlog(Blog blog) {
+    public Boolean insertBlog(Blog blog) {
         return blogMapper.insertBlog(blog);
     }
 
     @Override
-    public Integer deleteBlog(String id) {
-       return blogMapper.deleteBlog(id);
+    public Boolean deleteBlog(String id) {
+        return blogMapper.deleteBlog(id);
     }
 
     @Override
-    public Integer updateBlog(Blog blog) {
-       return blogMapper.updateBlog(blog);
+    public Boolean updateBlog(Blog blog) {
+        return blogMapper.updateBlog(blog);
     }
 
+    @Override
+    public Blog getBlogById(String id) {
+        return blogMapper.getBlogById(id);
+    }
 
+    ;
 }

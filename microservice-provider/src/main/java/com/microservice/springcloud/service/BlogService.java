@@ -7,9 +7,11 @@ import java.util.List;
 public interface BlogService {
     List<Blog> selectAll();
 
-    Integer insertBlog(Blog blog);
+    Boolean insertBlog(Blog blog);
 
-    Integer deleteBlog(String id);
+    Boolean deleteBlog(String id);
 
-    Integer updateBlog(Blog blog);
+    Boolean updateBlog(Blog blog);
+
+    Blog getBlogById(String id);
 }

@@ -11,6 +11,7 @@
     <modules>
         <module>microservice-api</module>
         <module>microservice-provider</module>
+        <module>microservice-consumer</module>
     </modules>
 
     <!--设置项目编码、编译版本配置-->

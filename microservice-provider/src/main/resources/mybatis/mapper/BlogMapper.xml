@@ -22,6 +22,10 @@
         #{blogType, jdbcType=VARCHAR},NOW(),NOW(), DATABASE())
     </insert>
 
+    <select id="getBlogById" parameterType="com.microservice.springcloud.entity.Blog" resultMap="resultMap">
+        SELECT * FROM blog WHERE id =#{id, jdbcType=VARCHAR}
+    </select>
+
     <delete id="deleteBlog" parameterType="com.microservice.springcloud.entity.Blog">
       DELETE FROM blog WHERE id =#{id, jdbcType=VARCHAR}
     </delete>
