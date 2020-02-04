@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.microservice.springcloud.mapper.BlogMapper">
+    <!--通用查询映射-->
+    <resultMap id="resultMap" type="com.microservice.springcloud.entity.Blog">
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="views" property="views"/>
+        <result column="blog_type" property="blogType"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_time" property="createTime"/>
+        <result column="db_source" property="dbSource"/>
+    </resultMap>
+
+    <insert id="insertBlog" parameterType="com.microservice.springcloud.entity.Blog">
+        INSERT INTO blog(title, content, views, blog_type, update_time, create_time, db_source)
+        VALUES(#{title, jdbcType=VARCHAR},#{content, jdbcType=VARCHAR},#{views, jdbcType=INTEGER},
+        #{blogType, jdbcType=VARCHAR},NOW(),NOW(), DATABASE())
+    </insert>
+
+    <delete id="deleteBlog" parameterType="com.microservice.springcloud.entity.Blog">
+      DELETE FROM blog WHERE id =#{id, jdbcType=VARCHAR}
+    </delete>
+
+    <update id="updateBlog" parameterType="com.microservice.springcloud.entity.Blog">
+        UPDATE blog SET
+            title = #{title, jdbcType=VARCHAR},
+            content = #{content, jdbcType=VARCHAR},
+            views = #{views, jdbcType=INTEGER},
+            blog_type = #{blogType, jdbcType=VARCHAR},
+            update_time = NOW(),
+            create_time = NOW(),
+            db_source = DATABASE()
+        WHERE id = #{id, jdbcType=VARCHAR}
+    </update>
+
+    <select id="selectAll" resultMap="resultMap">
+        select * from blog
+    </select>
+
+</mapper>
