@@ -7,7 +7,8 @@ mybatis:
     - classpath:mybatis/mapper/**/*.xml                   #mapper映射文件
 
 spring:
-  application: microservicecloud-blog
+  application:
+    name: microservicecloud-blog
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource          #当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver            #mysql驱动包
@@ -29,3 +30,16 @@ spring:
       restart:
         enabled: false
     add-properties: true                                  #开发者工具 热部署
+eureka:
+  instance:
+    instance-id: microservice-provider #映射名称
+    prefer-ip-address: true #访问路径可以显示ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+info:
+  app.name: blog-microsoftcloud
+  company.name: www.microsoftcloud.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
