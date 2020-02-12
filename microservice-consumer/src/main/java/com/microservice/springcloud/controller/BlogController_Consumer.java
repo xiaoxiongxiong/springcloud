@@ -31,4 +31,10 @@ public class BlogController_Consumer {
 	public Blog getBlogById(@PathVariable("id") String id) {
 		return restTemplate.getForObject(RES_URL_PREFIX + "/blog/getBlogById/" + id, Blog.class);
 	}
+
+	//消费端调用服务发现
+	@RequestMapping(value = "/blog/discovery")
+	public Object discovery(){
+		return restTemplate.getForObject(RES_URL_PREFIX + "/blog/discovery", Object.class);
+	}
 }

@@ -5,6 +5,8 @@ import com.microservice.springcloud.service.BlogService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +20,8 @@ public class BlogController {
     public static final Logger logger = LoggerFactory.getLogger(BlogController.class);
     @Autowired
     private BlogService blogService;
+    @Autowired
+    private DiscoveryClient discoveryClient;
 
     @RequestMapping(value = "/getBlogs", method = RequestMethod.GET)
     @ResponseBody
@@ -52,6 +56,20 @@ public class BlogController {
     public Blog getBlogById(@PathVariable String id) {
         Blog blog = blogService.getBlogById(id);
         return blog;
+    }
+
+    //获取eureka信息接口
+    @RequestMapping(value = "/discovery", method = RequestMethod.GET)
+    @ResponseBody
+    public Object discovery(){
+        List<String> list = discoveryClient.getServices();
+        System.out.println("******" + list);
+
+        List<ServiceInstance> srvList = discoveryClient.getInstances("MICROSERVICECLOUD-BLOG");
+        for (ServiceInstance element : srvList) {
+            System.out.println(element.getServiceId() + "\t" + element.getHost() + "\t" + element.getPort() + "\t" + element.getUri());
+        }
+        return this.discoveryClient;
     }
 }
 

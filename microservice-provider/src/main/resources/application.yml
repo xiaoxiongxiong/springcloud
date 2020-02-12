@@ -21,7 +21,7 @@ spring:
       max-total: 5                                        #最大连接数
       max-wait-millis: 200                                #等待连接获取最大超时时间
       test-while-idle: true                               #空闲时是否进行连接测试（默认true）
-      validation-query-timeout:
+      validation-query-timeout: 20000
       validation-query: SELECT 1
   devtools:
     livereload:
@@ -36,7 +36,8 @@ eureka:
     prefer-ip-address: true #访问路径可以显示ip地址
   client:
     service-url:
-      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#      defaultZone: http://localhost:7001/eureka
 
 info:
   app.name: blog-microsoftcloud

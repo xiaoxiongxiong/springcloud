@@ -13,6 +13,8 @@
         <module>microservice-provider</module>
         <module>microservice-consumer</module>
         <module>microservice-eureka</module>
+        <module>microservice-eureka02</module>
+        <module>microservice-eureka03</module>
     </modules>
 
     <!--设置项目编码、编译版本配置-->
