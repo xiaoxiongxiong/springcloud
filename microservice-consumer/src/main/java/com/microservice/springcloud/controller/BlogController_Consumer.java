@@ -12,7 +12,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/consumer")
 public class BlogController_Consumer {
-	public static final String RES_URL_PREFIX = "http://localhost:8001";
+//	public static final String RES_URL_PREFIX = "http://localhost:8001";
+	public static final String RES_URL_PREFIX = "http://MICROSERVICECLOUD-BLOG";
 
 	@Autowired
 	private RestTemplate restTemplate;
