@@ -53,7 +53,7 @@ public class BlogController {
 
     @RequestMapping(value = "/getBlogById/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Blog getBlogById(@PathVariable String id) {
+    public Blog getBlogById(@PathVariable("id") String id) {
         Blog blog = blogService.getBlogById(id);
         return blog;
     }

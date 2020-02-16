@@ -18,6 +18,7 @@
         <module>microservice-provider02</module>
         <module>microservice-provider03</module>
         <module>microservice-consumer-feign</module>
+        <module>microservice-hystrix</module>
     </modules>
 
     <!--设置项目编码、编译版本配置-->

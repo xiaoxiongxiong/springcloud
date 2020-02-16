@@ -4,7 +4,7 @@ server:
 spring:
   devtools:
     livereload:
-      port: 35730
+      port: 35736
 
 eureka: #ribbon相关eureka配置
   client:
