@@ -17,6 +17,7 @@
         <module>microservice-eureka03</module>
         <module>microservice-provider02</module>
         <module>microservice-provider03</module>
+        <module>microservice-consumer-feign</module>
     </modules>
 
     <!--设置项目编码、编译版本配置-->

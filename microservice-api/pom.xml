@@ -14,6 +14,12 @@
 
     <!--model 需要的jar包，如果父类已经有了不需要写版本-->
     <dependencies>
+        <!--Feign相关-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
