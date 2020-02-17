@@ -9,6 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <properties>
+        <start-class>com.microservice.springcloud.ProviderMain02</start-class>
+    </properties>
+
     <artifactId>microservice-provider02</artifactId>
 
     <!--model 需要的jar包，如果父类已经有了不需要写版本-->
