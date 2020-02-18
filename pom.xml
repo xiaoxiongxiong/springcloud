@@ -21,6 +21,10 @@
         <module>microservice-hystrix</module>
         <module>microservice-consumer-hystrix-dashboard</module>
         <module>microservice-zuul-gateway</module>
+        <module>microservice-config-server</module>
+        <module>microservice-config-client</module>
+        <module>microservice-config-eureka-client</module>
+        <module>microservice-config-blog-client</module>
     </modules>
 
     <!--设置项目编码、编译版本配置-->

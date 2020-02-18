@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-api" />
+        <module name="microservice-config-blog-client" />
+        <module name="microservice-config-client" />
+        <module name="microservice-config-eureka-client" />
+        <module name="microservice-config-server" />
+        <module name="microservice-consumer" />
+        <module name="microservice-consumer-feign" />
+        <module name="microservice-consumer-hystrix-dashboard" />
+        <module name="microservice-eureka" />
+        <module name="microservice-eureka02" />
+        <module name="microservice-eureka03" />
+        <module name="microservice-hystrix" />
+        <module name="microservice-provider" />
+        <module name="microservice-provider02" />
+        <module name="microservice-provider03" />
+        <module name="microservice-zuul-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blog" target="1.8" />
+      <module name="microservice-api" target="1.8" />
+      <module name="microservice-config-blog-client" target="1.8" />
+      <module name="microservice-config-client" target="1.8" />
+      <module name="microservice-config-eureka-client" target="1.8" />
+      <module name="microservice-config-server" target="1.8" />
+      <module name="microservice-consumer" target="1.8" />
+      <module name="microservice-consumer-feign" target="1.8" />
+      <module name="microservice-consumer-hystrix-dashboard" target="1.8" />
+      <module name="microservice-eureka" target="1.8" />
+      <module name="microservice-eureka02" target="1.8" />
+      <module name="microservice-eureka03" target="1.8" />
+      <module name="microservice-hystrix" target="1.8" />
+      <module name="microservice-provider" target="1.8" />
+      <module name="microservice-provider02" target="1.8" />
+      <module name="microservice-provider03" target="1.8" />
+      <module name="microservice-zuul-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
