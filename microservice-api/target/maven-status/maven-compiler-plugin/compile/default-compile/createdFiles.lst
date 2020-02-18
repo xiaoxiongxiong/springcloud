@@ -1,0 +1,4 @@
+com\microservice\springcloud\entity\Blog.class
+com\microservice\springcloud\service\BlogClientServiceFallbackFactory.class
+com\microservice\springcloud\service\BlogClientService.class
+com\microservice\springcloud\service\BlogClientServiceFallbackFactory$1.class

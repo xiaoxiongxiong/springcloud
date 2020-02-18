@@ -1,0 +1,30 @@
+server:
+  port: 9527
+
+eureka:
+  instance:
+    instance-id: myzuul.com #映射名称
+    prefer-ip-address: true #访问路径可以显示ip地址
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+#      defaultZone: http://localhost:7001/eureka
+
+info:
+  app.name: blog-microsoftcloud
+  company.name: www.microsoftcloud.com
+  build.artifactId: microservice-zuul-gateway
+  build.version: 1.0-SNAPSHOT
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+zuul:
+  routes:
+    myBlog.serviceId: microservicecloud-blog
+    myBlog.path: /myBlog/**
+  ignored-services: "*"  #忽略多个微服务
+  prefix: /dev
+#  ignored-services: microservicecloud-blog
+
